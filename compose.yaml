@@ -1,0 +1,9 @@
+services:
+  php:
+    container_name: php-${COMPOSE_PROJECT_NAME}
+    build: ./.docker/php
+    restart: always
+    volumes:
+      - .:/app
+    ports:
+      - 9000:9000
